@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <!-- Outer Room -->
+      <a-box position="0 3 -10" depth="15" height="6" width="15" color="#FF5733"></a-box>
+
+      <!-- Inner Room -->
+      <a-box position="0 3 -5" depth="15" height="6" width="15" color="#33FFA5"></a-box>
+
+      <!-- Camera Setup -->
+      <a-entity id="cameraRig">
+        <a-camera
+          look-controls="pointerLockEnabled: true"
+          cursor="rayOrigin: mouse"
+          raycaster="objects: [data-raycastable]"
+        ></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
